@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: streaming
+
+  flyway:
+    url: jdbc:postgresql://localhost:5433/mydb
+    locations: classpath:db/migration
+    username: admin
+    password: secret
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5433/mydb
+    username: admin
+    password: secret
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
